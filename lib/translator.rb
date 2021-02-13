@@ -26,7 +26,7 @@ def get_japanese_emoticon(path, emoticon)
   apology = "Sorry, that emoticon was not found"
   emote_translations.each do |key, value|
     if value[:english] == emoticon
-      return key
+      return value[:japanese]
     end
   end
   apology  
