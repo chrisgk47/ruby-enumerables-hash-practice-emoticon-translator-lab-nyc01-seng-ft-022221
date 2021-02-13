@@ -1,13 +1,22 @@
-# require modules here
+require 'yaml'
+require 'pry'
 
-def load_library
-  # code goes here
-end
+def load_library(path)
+  emoticons = YAML.load_file(path)
+  emote_hash = Hash.new
+  keys = []
+  emoticons.each do |key|
+    keys << key
+  end
+  puts keys
+    
 
-def get_japanese_emoticon
-  # code goes here
-end
 
-def get_english_meaning
-  # code goes here
+
+
+
+
+
+  #puts emoticons
+  emote_hash
 end
